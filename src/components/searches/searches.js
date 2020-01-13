@@ -1,5 +1,6 @@
-import SearchesAdapter from "../adapters/SearchesAdapter.js";
+import SearchesAdapter from "../../adapters/SearchesAdapter.js";
 import Search from "./search.js";
+import Books from "../books/books.js";
 
 class Searches {
   constructor() {
@@ -19,7 +20,7 @@ class Searches {
     const searchBar = document.getElementById("search-bar");
     this.adapter
       .createNewSearch(searchBar.value)
-      .then(books => console.log(books))
+      .then(obj => new Books(obj.books))
       .then(() => this.fetchAndLoadSearches());
     searchBar.value = "";
   }
