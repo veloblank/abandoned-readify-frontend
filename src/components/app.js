@@ -1,4 +1,4 @@
-import Searches from "./searches.js";
+import Searches from "./searches/searches.js";
 
 class App {
   constructor() {
