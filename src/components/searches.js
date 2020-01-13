@@ -19,6 +19,7 @@ class Searches {
     const searchBar = document.getElementById("search-bar");
     this.adapter
       .createNewSearch(searchBar.value)
+      .then(books => console.log(books))
       .then(() => this.fetchAndLoadSearches());
     searchBar.value = "";
   }
