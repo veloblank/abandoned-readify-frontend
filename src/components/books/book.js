@@ -6,6 +6,7 @@ class Book {
     this.string_reading_length = obj.length_text_string;
     this.reading_length = obj.length_text_mins;
     this.id = obj.search_id;
+    this.words = this.reading_length * 150;
   }
 }
 

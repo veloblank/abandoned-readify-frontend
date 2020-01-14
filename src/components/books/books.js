@@ -20,7 +20,19 @@ class Books {
       booksContainer.removeChild(booksContainer.firstChild);
     }
     this.books.forEach(book => {
-      let bookCard = `<img src='${book.img_src}'/>`;
+      let bookCard = `
+        <div class='book-card'>
+          <div class='book-cover'>
+            <img src='${book.img_src}'/>
+          </div>
+          <div class='book-info'>
+            <div class='book-title'>${book.title}</div>
+            <h4>${book.words} words</h4>
+            <p>${book.author}</p>
+            <p>Audiobook: ${book.string_reading_length}</p>
+          </div>
+        </div>
+      `;
       booksContainer.innerHTML += bookCard;
     });
   }
